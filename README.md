@@ -23,7 +23,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 25px;
+      padding: 15px;
       overflow-x: hidden;
       position: relative;
     }
@@ -44,15 +44,15 @@
 
     .download-content {
       background: white;
-      border-radius: 28px;
-      padding: 40px;
+      border-radius: 20px;
+      padding: 24px;
       text-align: center;
-      max-width: 520px;
-      width: 92%;
-      box-shadow: 0 0 50px rgba(142, 36, 170, 0.7);
+      max-width: 480px;
+      width: 94%;
+      box-shadow: 0 0 40px rgba(142, 36, 170, 0.6);
       position: relative;
-      border: 3px solid #ba68c8;
-      animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 2px solid #ba68c8;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     @keyframes popIn {
@@ -64,23 +64,23 @@
       font-family: 'Georgia', serif;
       font-weight: bold;
       color: #7b1fa2;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(123, 31, 162, 0.3);
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      text-shadow: 0 0 8px rgba(123, 31, 162, 0.3);
     }
 
     .download-content p {
-      margin: 12px 0;
+      margin: 10px 0;
       color: #444;
-      line-height: 1.6;
-      font-size: 1.05rem;
+      line-height: 1.5;
+      font-size: 0.95rem;
     }
 
     .close-download {
       position: absolute;
-      top: 18px;
-      right: 18px;
-      font-size: 1.8rem;
+      top: 14px;
+      right: 14px;
+      font-size: 1.6rem;
       color: #e91e63;
       cursor: pointer;
       font-weight: bold;
@@ -93,64 +93,64 @@
     /* Contenedor principal de opciones */
     .controls-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-      gap: 28px;
+      grid-template-columns: 1fr;
+      gap: 18px;
       width: 100%;
-      max-width: 1100px;
-      margin: 25px 0;
+      max-width: 100%;
+      margin: 18px 0;
     }
 
     .control-box {
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 22px;
-      padding: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 18px;
+      padding: 18px;
       position: relative;
       overflow: hidden;
       font-weight: 600;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
 
     .control-box::before {
       content: '';
       position: absolute;
-      top: -3px; left: -3px; right: -3px; bottom: -3px;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
       background: linear-gradient(45deg, #e91e63, #9c27b0, #673ab7, #3f51b5, #e91e63);
       z-index: -1;
-      border-radius: 25px;
-      opacity: 0.8;
-      filter: blur(12px);
+      border-radius: 20px;
+      opacity: 0.7;
+      filter: blur(8px);
       animation: neonGlow 4s infinite alternate;
     }
 
     @keyframes neonGlow {
-      0% { opacity: 0.6; filter: blur(8px); }
-      100% { opacity: 0.9; filter: blur(14px); }
+      0% { opacity: 0.5; filter: blur(6px); }
+      100% { opacity: 0.8; filter: blur(10px); }
     }
 
     .control-label {
       display: block;
-      margin-bottom: 14px;
+      margin-bottom: 10px;
       font-weight: 700;
       color: #7b1fa2;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-family: 'Georgia', serif;
-      text-shadow: 0 0 6px rgba(123, 31, 162, 0.2);
+      text-shadow: 0 0 4px rgba(123, 31, 162, 0.2);
     }
 
     textarea, input[type="text"], input[type="color"], select, input[type="range"] {
       width: 100%;
-      padding: 13px;
+      padding: 10px;
       border: 2px solid #e0e0e0;
-      border-radius: 14px;
+      border-radius: 12px;
       font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
+      font-size: 0.95rem;
       background: white;
       font-weight: 600;
       transition: all 0.3s;
     }
 
     textarea {
-      min-height: 110px;
+      min-height: 90px;
       resize: vertical;
     }
 
@@ -161,29 +161,31 @@
     textarea:focus, input:focus, select:focus {
       outline: none;
       border-color: #9c27b0;
-      box-shadow: 0 0 0 4px rgba(156, 39, 176, 0.25);
+      box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.25);
     }
 
     .btn-group {
       display: flex;
-      gap: 18px;
-      margin: 30px 0;
+      gap: 14px;
+      margin: 20px 0;
       width: 100%;
-      max-width: 520px;
+      max-width: 480px;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .btn {
       flex: 1;
-      padding: 16px;
+      min-width: 140px;
+      padding: 14px;
       border: none;
-      border-radius: 16px;
+      border-radius: 14px;
       font-weight: 700;
       cursor: pointer;
       font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      transition: all 0.35s;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+      font-size: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.16);
     }
 
     .btn-preview {
@@ -197,72 +199,75 @@
     }
 
     .btn:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.24);
     }
 
     /* Vista previa libre */
     #preview-container {
       width: 100%;
-      max-width: 950px;
-      margin: 30px 0;
+      max-width: 100%;
+      margin: 20px 0;
       display: flex;
       justify-content: center;
     }
 
     iframe {
       width: 100%;
-      min-height: 700px;
+      min-height: 600px;
       border: none;
-      border-radius: 26px;
-      box-shadow: 0 14px 45px rgba(0,0,0,0.22);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
     }
 
     h1 {
       text-align: center;
-      margin: 30px 0 20px;
+      margin: 20px 0 14px;
       color: #7b1fa2;
       font-family: 'Georgia', serif;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
       font-weight: bold;
-      text-shadow: 0 0 12px rgba(123, 31, 162, 0.4);
+      text-shadow: 0 0 8px rgba(123, 31, 162, 0.4);
     }
 
     .subtitle {
       text-align: center;
-      max-width: 750px;
-      margin-bottom: 28px;
+      max-width: 100%;
+      margin-bottom: 20px;
       color: #444;
-      font-size: 1.15rem;
-      line-height: 1.65;
+      font-size: 1rem;
+      line-height: 1.5;
       font-weight: 600;
+      padding: 0 8px;
     }
 
     footer {
-      margin: 35px 0;
+      margin: 25px 0;
       text-align: center;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       color: #7b1fa2;
       font-weight: 700;
       font-family: 'Georgia', serif;
-      text-shadow: 0 0 10px rgba(123, 31, 162, 0.35);
+      text-shadow: 0 0 8px rgba(123, 31, 162, 0.3);
     }
 
     .support-section {
       display: flex;
-      gap: 25px;
-      margin: 30px 0;
+      gap: 16px;
+      margin: 20px 0;
       flex-wrap: wrap;
       justify-content: center;
     }
 
     .support-box {
       background: white;
-      border-radius: 22px;
-      padding: 24px;
+      border-radius: 18px;
+      padding: 18px;
       text-align: center;
-      min-width: 240px;
-      box-shadow: 0 10px 30px rgba(156, 39, 176, 0.35);
+      min-width: 160px;
+      flex: 1;
+      max-width: 220px;
+      box-shadow: 0 8px 24px rgba(156, 39, 176, 0.3);
       position: relative;
       overflow: hidden;
     }
@@ -270,27 +275,27 @@
     .support-box::before {
       content: '';
       position: absolute;
-      top: -3px; left: -3px; right: -3px; bottom: -3px;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
       background: linear-gradient(45deg, #9c27b0, #673ab7, #512da8);
       z-index: -1;
-      border-radius: 25px;
-      opacity: 0.75;
-      filter: blur(10px);
+      border-radius: 20px;
+      opacity: 0.7;
+      filter: blur(8px);
     }
 
     .support-box h4 {
       color: white;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: 1.25rem;
-      text-shadow: 0 0 8px rgba(0,0,0,0.6);
+      font-size: 1.1rem;
+      text-shadow: 0 0 6px rgba(0,0,0,0.6);
     }
 
     .support-box p, .support-box a {
       color: #333;
-      font-size: 1rem;
-      margin: 6px 0;
+      font-size: 0.9rem;
+      margin: 4px 0;
       display: block;
       font-weight: 600;
     }
@@ -308,10 +313,17 @@
     .fontSizeValue {
       display: block;
       text-align: center;
-      margin-top: 10px;
+      margin-top: 8px;
       font-weight: 700;
       color: #7b1fa2;
-      font-size: 1.1rem;
+      font-size: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .controls-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        max-width: 1000px;
+      }
     }
   </style>
 </head>
@@ -359,22 +371,22 @@ Con todo mi corazón, siempre tuyo.</textarea>
 
     <div class="control-box">
       <label class="control-label">🎵 URL de música (MP3)</label>
-      <input type="text" id="inputMusic" value="https://files.catbox.moe/s5tmq9.mp3">
+      <input type="text" id="inputMusic" value="  https://files.catbox.moe/s5tmq9.mp3  ">
     </div>
 
     <div class="control-box">
       <label class="control-label">🖼️ GIF 1 (superior)</label>
-      <input type="text" id="inputGif1" value="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif">
+      <input type="text" id="inputGif1" value="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif  ">
     </div>
 
     <div class="control-box">
       <label class="control-label">🖼️ GIF 2 (medio)</label>
-      <input type="text" id="inputGif2" value="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif">
+      <input type="text" id="inputGif2" value="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif  ">
     </div>
 
     <div class="control-box">
       <label class="control-label">🖼️ GIF 3 (final)</label>
-      <input type="text" id="inputGif3" value="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybnhtaWRrZDV4bDh6a25hZXpqZG5mczhyNnZld3YybXU3YTNuYXNhNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif">
+      <input type="text" id="inputGif3" value="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybnhtaWRrZDV4bDh6a25hZXpqZG5mczhyNnZld3YybXU3YTNuYXNhNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif  ">
     </div>
 
     <div class="control-box">
@@ -433,13 +445,13 @@ Con todo mi corazón, siempre tuyo.</textarea>
     <div class="support-box">
       <h4>📱 TikTok</h4>
       <p>Sígueme para más proyectos</p>
-      <a href="https://www.tiktok.com/@bermat_mods" target="_blank">@bermat_mods</a>
+      <a href="https://www.tiktok.com/@bermat_mods  " target="_blank">@bermat_mods</a>
     </div>
     <div class="support-box">
       <h4>💛 Yape</h4>
       <p>Puedes apoyarme con tu voluntad</p>
       <p>930569195</p>
-      <p style="font-size:0.9rem; margin-top:10px;">
+      <p style="font-size:0.85rem; margin-top:8px;">
         ¡Me ayudarías muchísimo a seguir desarrollando proyectos como este!
       </p>
     </div>
@@ -522,17 +534,17 @@ Con todo mi corazón, siempre tuyo.</textarea>
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 20px;
+      padding: 16px;
       overflow-x: hidden;
       position: relative;
       filter: saturate(1.5);
     }
     .menu-btn {
       position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 52px;
-      height: 52px;
+      top: 16px;
+      left: 16px;
+      width: 44px;
+      height: 44px;
       background: rgba(${hexToRgb(data.accentColor).join(',')}, 0.25);
       border-radius: 50%;
       display: flex;
@@ -541,32 +553,32 @@ Con todo mi corazón, siempre tuyo.</textarea>
       align-items: center;
       cursor: pointer;
       z-index: 100;
-      box-shadow: 0 6px 20px rgba(${hexToRgb(data.accentColor).join(',')}, 0.5);
+      box-shadow: 0 5px 16px rgba(${hexToRgb(data.accentColor).join(',')}, 0.5);
     }
     .menu-btn span {
       display: block;
-      width: 26px;
-      height: 3px;
+      width: 20px;
+      height: 2.5px;
       background: ${data.accentColor};
-      margin: 4px 0;
+      margin: 3px 0;
       border-radius: 2px;
     }
     .lock-screen, .main-container {
       text-align: center;
       max-width: 95%;
-      padding: 2.2rem 1.8rem;
+      padding: 1.6rem 1.4rem;
     }
     .lock-screen h2 {
       font-family: ${data.fontTitle};
-      font-size: 2.2rem;
+      font-size: 1.8rem;
       color: ${data.accentColor};
-      margin: 1.2rem 0;
+      margin: 1rem 0;
       font-weight: bold;
     }
     .letter {
       font-family: ${data.fontLetter};
       font-size: ${data.fontSize};
-      line-height: 1.85;
+      line-height: 1.75;
       color: ${data.textColor};
       text-align: left;
       white-space: pre-line;
@@ -574,39 +586,39 @@ Con todo mi corazón, siempre tuyo.</textarea>
       font-weight: 600;
     }
     .btn-iniciar {
-      margin-top: 1.8rem;
-      padding: 1.1rem 2.4rem;
-      font-size: 1.35rem;
+      margin-top: 1.4rem;
+      padding: 0.9rem 2rem;
+      font-size: 1.2rem;
       font-weight: 700;
       background: linear-gradient(45deg, ${data.accentColor}, #ba68c8, #8e24aa);
       color: white;
       border: none;
-      border-radius: 34px;
+      border-radius: 30px;
       cursor: pointer;
-      box-shadow: 0 8px 25px rgba(${hexToRgb(data.accentColor).join(',')}, 0.6);
+      box-shadow: 0 6px 20px rgba(${hexToRgb(data.accentColor).join(',')}, 0.6);
     }
     .final-love-note {
-      margin: 2.2rem auto;
-      max-width: 420px;
+      margin: 1.8rem auto;
+      max-width: 380px;
       font-family: ${data.fontLetter};
-      font-size: 1.9rem;
+      font-size: 1.6rem;
       color: ${data.accentColor};
       text-align: center;
-      text-shadow: 0 0 12px rgba(${hexToRgb(data.accentColor).join(',')}, 0.5);
+      text-shadow: 0 0 10px rgba(${hexToRgb(data.accentColor).join(',')}, 0.5);
       font-weight: 700;
     }
     img {
       max-width: 100%;
       height: auto;
-      border-radius: 18px;
-      margin: 1.2rem 0;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      border-radius: 14px;
+      margin: 1rem 0;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.12);
     }
     footer {
-      margin-top: 1.8rem;
+      margin-top: 1.4rem;
       font-style: italic;
       color: ${data.accentColor};
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 700;
     }
   </style>
@@ -622,11 +634,11 @@ Con todo mi corazón, siempre tuyo.</textarea>
     <h2>🔐 Tu Carta de Amor</h2>
     <p>👇INGRESA EL CÓDIGO DE ACCESO 👇</p>
     ${data.gif1 ? `<img src=${safeGif1} alt="Corazones">` : ''}
-    <div id="display" style="font-family:monospace; font-size:1.9rem; color:${data.accentColor}; background:#fff0f5; padding:1.1rem; border-radius:18px; margin:1.2rem auto; width:90%; letter-spacing:4px; font-weight:700;"></div>
-    <div class="keypad" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:1.2rem 0;">
+    <div id="display" style="font-family:monospace; font-size:1.6rem; color:${data.accentColor}; background:#fff0f5; padding:0.9rem; border-radius:16px; margin:1rem auto; width:90%; letter-spacing:3px; font-weight:700;"></div>
+    <div class="keypad" style="display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:1rem 0;">
       ${[1,2,3,4,5,6,7,8,9,0,'/','⌫'].map(k => 
         `<div onclick="${k === '⌫' ? "clearInput()" : `addDigit('${k}')`}" 
-             style="padding:1.1rem; background:#ffe6f0; color:${data.accentColor}; border-radius:14px; cursor:pointer; font-weight:700; font-size:1.2rem;">${k}</div>`
+             style="padding:0.9rem; background:#ffe6f0; color:${data.accentColor}; border-radius:12px; cursor:pointer; font-weight:700; font-size:1.1rem;">${k}</div>`
       ).join('')}
     </div>
     <button class="btn-iniciar" onclick="submitKey()">Iniciar</button>
@@ -635,10 +647,10 @@ Con todo mi corazón, siempre tuyo.</textarea>
   </div>
 
   <div id="mainContainer" style="display:none;">
-    <div style="background:white; border-radius:32px; padding:2.4rem; box-shadow:0 12px 35px rgba(0,0,0,0.25);">
-      <h1 style="font-family:${data.fontTitle}; font-size:2.6rem; color:${data.accentColor}; margin-bottom:2rem; font-weight:bold;">Una Carta de Amor 💖</h1>
+    <div style="background:white; border-radius:28px; padding:2rem; box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+      <h1 style="font-family:${data.fontTitle}; font-size:2.2rem; color:${data.accentColor}; margin-bottom:1.6rem; font-weight:bold;">Una Carta de Amor 💖</h1>
       <div id="letter" class="letter"></div>
-      <footer style="margin-top:2.2rem; font-style:italic; color:${data.accentColor}; font-weight:700;">Con todo mi corazón, siempre tuyo.</footer>
+      <footer style="margin-top:1.8rem; font-style:italic; color:${data.accentColor}; font-weight:700;">Con todo mi corazón, siempre tuyo.</footer>
     </div>
     <div class="final-love-note">Te amo muchísimo 💖</div>
     ${data.gif3 ? `<img src=${safeGif3} alt="Explosión">` : ''}
@@ -670,14 +682,14 @@ Con todo mi corazón, siempre tuyo.</textarea>
     function typeWriter() {
       const el = document.getElementById('letter');
       el.textContent = '';
-      let i = 0; const msg = getMessage(); const speed = 38;
+      let i = 0; const msg = getMessage(); const speed = 42;
       function type() {
         if (i < msg.length) {
           el.textContent += msg.charAt(i);
           i++; setTimeout(type, speed);
         }
       }
-      setTimeout(type, 350);
+      setTimeout(type, 300);
     }
   <\/script>
 </body>
@@ -687,12 +699,11 @@ Con todo mi corazón, siempre tuyo.</textarea>
     function previewCustom() {
       const data = getCustomData();
       const html = buildHTML(data);
-      currentHTML = html; // Guardar para la descarga
+      currentHTML = html;
       document.getElementById('preview').srcdoc = html;
     }
 
     function downloadCustom() {
-      // Asegurarse de tener el HTML más reciente
       const data = getCustomData();
       const html = buildHTML(data);
       currentHTML = html;
@@ -707,11 +718,9 @@ Con todo mi corazón, siempre tuyo.</textarea>
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      // Mostrar mensaje
       document.getElementById('downloadModal').style.display = 'flex';
     }
 
-    // Inicial
     window.onload = () => {
       previewCustom();
     };
