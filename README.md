@@ -137,7 +137,7 @@
       text-shadow: 0 0 4px rgba(123, 31, 162, 0.2);
     }
 
-    textarea, input[type="text"], input[type="color"], select, input[type="range"] {
+    textarea, input[type="text"], input[type="color"], select, input[type="range"], input[type="file"] {
       width: 100%;
       padding: 10px;
       border: 2px solid #e0e0e0;
@@ -147,6 +147,11 @@
       background: white;
       font-weight: 600;
       transition: all 0.3s;
+    }
+
+    input[type="file"] {
+      padding: 6px;
+      font-size: 0.9rem;
     }
 
     textarea {
@@ -319,6 +324,31 @@
       font-size: 1rem;
     }
 
+    .upload-toggle {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+
+    .upload-toggle label {
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 8px;
+      background: #f5f5f5;
+      color: #7b1fa2;
+      font-weight: 600;
+    }
+
+    .upload-toggle input {
+      display: none;
+    }
+
+    .upload-toggle label.active {
+      background: #e91e63;
+      color: white;
+    }
+
     @media (min-width: 768px) {
       .controls-container {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -371,22 +401,40 @@ Con todo mi corazón, siempre tuyo.</textarea>
 
     <div class="control-box">
       <label class="control-label">🎵 URL de música (MP3)</label>
-      <input type="text" id="inputMusic" value="  https://files.catbox.moe/s5tmq9.mp3  ">
+      <input type="text" id="inputMusic" value="https://files.catbox.moe/s5tmq9.mp3">
     </div>
 
+    <!-- GIF 1 -->
     <div class="control-box">
-      <label class="control-label">🖼️ GIF 1 (superior)</label>
-      <input type="text" id="inputGif1" value="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif  ">
+      <label class="control-label">🖼️ Imagen 1 (superior)</label>
+      <input type="text" id="inputGif1" value="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZTAxbHV0Mm1rYmI2emc3ZmdvcGdka2szMGMzMHl4ZXlhcmEzN3A4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y62ofc4S1Vst2/giphy.gif">
+      <div class="upload-toggle">
+        <label><input type="radio" name="img1Mode" value="url" checked> URL</label>
+        <label><input type="radio" name="img1Mode" value="upload"> Subir archivo</label>
+      </div>
+      <input type="file" id="fileGif1" accept="image/*" style="display:none;">
     </div>
 
+    <!-- GIF 2 -->
     <div class="control-box">
-      <label class="control-label">🖼️ GIF 2 (medio)</label>
-      <input type="text" id="inputGif2" value="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif  ">
+      <label class="control-label">🖼️ Imagen 2 (medio)</label>
+      <input type="text" id="inputGif2" value="https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyMzl0NTh2ZHhmOHF1Nm45NHNqcmN1bTVrdHNtbDgwbjZpZTFqMno3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11TyfGbDbBv4be/giphy.gif">
+      <div class="upload-toggle">
+        <label><input type="radio" name="img2Mode" value="url" checked> URL</label>
+        <label><input type="radio" name="img2Mode" value="upload"> Subir archivo</label>
+      </div>
+      <input type="file" id="fileGif2" accept="image/*" style="display:none;">
     </div>
 
+    <!-- GIF 3 -->
     <div class="control-box">
-      <label class="control-label">🖼️ GIF 3 (final)</label>
-      <input type="text" id="inputGif3" value="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybnhtaWRrZDV4bDh6a25hZXpqZG5mczhyNnZld3YybXU3YTNuYXNhNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif  ">
+      <label class="control-label">🖼️ Imagen 3 (final)</label>
+      <input type="text" id="inputGif3" value="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUybnhtaWRrZDV4bDh6a25hZXpqZG5mczhyNnZld3YybXU3YTNuYXNhNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif">
+      <div class="upload-toggle">
+        <label><input type="radio" name="img3Mode" value="url" checked> URL</label>
+        <label><input type="radio" name="img3Mode" value="upload"> Subir archivo</label>
+      </div>
+      <input type="file" id="fileGif3" accept="image/*" style="display:none;">
     </div>
 
     <div class="control-box">
@@ -435,43 +483,75 @@ Con todo mi corazón, siempre tuyo.</textarea>
     <button class="btn btn-download" onclick="downloadCustom()">💾 Descargar carta</button>
   </div>
 
-  <!-- Vista previa libre -->
   <div id="preview-container">
     <iframe id="preview"></iframe>
   </div>
 
-  <!-- Apoyo -->
   <div class="support-section">
     <div class="support-box">
       <h4>📱 TikTok</h4>
       <p>Sígueme para más proyectos</p>
-      <a href="https://www.tiktok.com/@bermat_mods  " target="_blank">@bermat_mods</a>
+      <a href="https://www.tiktok.com/@bermat_mods" target="_blank">@bermat_mods</a>
     </div>
     <div class="support-box">
-      <h4>💛 Yape</h4>
-      <p>💜💜💜💜💜💜</p>
+      <h4>💜Yape💜</h4>
+      <p>💜Puedes apoyarme con tu voluntad💜</p>
       <p>930569195</p>
       <p style="font-size:0.85rem; margin-top:8px;">
-        ¡Me ayudarías muchísimo a seguir desarrollando proyectos como este!
+        ¡💜Me ayudarías muchísimo a seguir desarrollando proyectos como este💜!
       </p>
     </div>
   </div>
 
   <footer>By AnthZz Berrocal • BerMatMods</footer>
 
-  <!-- Modal de descarga -->
   <div id="downloadModal">
     <div class="download-content">
       <div class="close-download" onclick="document.getElementById('downloadModal').style.display='none'">×</div>
       <h3>✅ ¡Carta descargada con éxito!</h3>
       <p>Ya puedes visualizarla desde tu memoria interna.</p>
       <p>¡Compártela con tus seres queridos y hazlos sonreír! 💖</p>
-      <p>No te olvides de seguirme en Tiktok @bermat_mods , dar like y compartir el video.</p>
+      <p>No te olvides de seguirme en TikTok, dar like y compartir el video.</p>
       <p>¡Gracias por tu apoyo! 🌟</p>
     </div>
   </div>
 
   <script>
+    // Mostrar/ocultar input de archivo al cambiar modo
+    function setupUploadToggles() {
+      ['1','2','3'].forEach(i => {
+        const urlInput = document.getElementById(`inputGif${i}`);
+        const fileInput = document.getElementById(`fileGif${i}`);
+        const radioUrl = document.querySelector(`input[name="img${i}Mode"][value="url"]`);
+        const radioUpload = document.querySelector(`input[name="img${i}Mode"][value="upload"]`);
+
+        radioUrl.addEventListener('change', () => {
+          urlInput.style.display = 'block';
+          fileInput.style.display = 'none';
+          previewCustom();
+        });
+        radioUpload.addEventListener('change', () => {
+          urlInput.style.display = 'none';
+          fileInput.style.display = 'block';
+          previewCustom();
+        });
+      });
+    }
+
+    // Leer archivo y convertir a data URL
+    function readFileAsDataURL(file) {
+      return new Promise((resolve, reject) => {
+        if (!file) {
+          resolve('');
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
     // Actualización automática
     document.querySelectorAll('input, textarea, select').forEach(el => {
       el.addEventListener('input', previewCustom);
@@ -481,17 +561,32 @@ Con todo mi corazón, siempre tuyo.</textarea>
       document.getElementById('fontSizeValue').textContent = document.getElementById('fontSize').value + 'px';
     });
 
-    // Almacenar el HTML actual para la descarga
     let currentHTML = '';
 
-    function getCustomData() {
+    async function getCustomData() {
+      const mode1 = document.querySelector('input[name="img1Mode"]:checked').value;
+      const mode2 = document.querySelector('input[name="img2Mode"]:checked').value;
+      const mode3 = document.querySelector('input[name="img3Mode"]:checked').value;
+
+      let gif1 = mode1 === 'url' 
+        ? document.getElementById('inputGif1').value.trim() 
+        : await readFileAsDataURL(document.getElementById('fileGif1').files[0]);
+
+      let gif2 = mode2 === 'url' 
+        ? document.getElementById('inputGif2').value.trim() 
+        : await readFileAsDataURL(document.getElementById('fileGif2').files[0]);
+
+      let gif3 = mode3 === 'url' 
+        ? document.getElementById('inputGif3').value.trim() 
+        : await readFileAsDataURL(document.getElementById('fileGif3').files[0]);
+
       return {
         code: document.getElementById('inputCode').value.trim() || '2050',
         message: document.getElementById('inputMessage').value.trim() || 'Mensaje predeterminado...',
         music: document.getElementById('inputMusic').value.trim() || 'https://files.catbox.moe/s5tmq9.mp3',
-        gif1: document.getElementById('inputGif1').value.trim(),
-        gif2: document.getElementById('inputGif2').value.trim(),
-        gif3: document.getElementById('inputGif3').value.trim(),
+        gif1,
+        gif2,
+        gif3,
         bgColor: document.getElementById('bgColor').value || '#fff0f5',
         textColor: document.getElementById('textColor').value || '#d81b60',
         accentColor: document.getElementById('accentColor').value || '#e91e63',
@@ -625,7 +720,6 @@ Con todo mi corazón, siempre tuyo.</textarea>
 </head>
 <body>
 
-  <!-- Menú de WhatsApp -->
   <div class="menu-btn" onclick="window.open('https://wa.me/51930569195', '_blank')">
     <span></span><span></span><span></span>
   </div>
@@ -696,15 +790,15 @@ Con todo mi corazón, siempre tuyo.</textarea>
 </html>`;
     }
 
-    function previewCustom() {
-      const data = getCustomData();
+    async function previewCustom() {
+      const data = await getCustomData();
       const html = buildHTML(data);
       currentHTML = html;
       document.getElementById('preview').srcdoc = html;
     }
 
-    function downloadCustom() {
-      const data = getCustomData();
+    async function downloadCustom() {
+      const data = await getCustomData();
       const html = buildHTML(data);
       currentHTML = html;
 
@@ -721,7 +815,9 @@ Con todo mi corazón, siempre tuyo.</textarea>
       document.getElementById('downloadModal').style.display = 'flex';
     }
 
+    // Inicializar toggles
     window.onload = () => {
+      setupUploadToggles();
       previewCustom();
     };
   </script>
