@@ -449,7 +449,7 @@ Con todo mi corazón, siempre tuyo.</textarea>
     </div>
     <div class="support-box">
       <h4>💛 Yape</h4>
-      <p>Puedes apoyarme con tu voluntad</p>
+      <p>💜💜💜💜💜💜</p>
       <p>930569195</p>
       <p style="font-size:0.85rem; margin-top:8px;">
         ¡Me ayudarías muchísimo a seguir desarrollando proyectos como este!
@@ -466,7 +466,7 @@ Con todo mi corazón, siempre tuyo.</textarea>
       <h3>✅ ¡Carta descargada con éxito!</h3>
       <p>Ya puedes visualizarla desde tu memoria interna.</p>
       <p>¡Compártela con tus seres queridos y hazlos sonreír! 💖</p>
-      <p>No te olvides de seguirme en TikTok, dar like y compartir el video.</p>
+      <p>No te olvides de seguirme en Tiktok @bermat_mods , dar like y compartir el video.</p>
       <p>¡Gracias por tu apoyo! 🌟</p>
     </div>
   </div>
